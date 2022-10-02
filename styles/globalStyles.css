@@ -38,6 +38,19 @@ body {
   background-color: var(--color-grey-9);
 }
 
+button {
+  padding: 8px;
+  border-radius: var(--radius-1);
+  height: 32px;
+}
+
+button:hover, input:hover{
+  cursor: pointer;
+}
+
+ul{
+  list-style: none;
+}
 .container {
   width: var(--container);
   max-width: 100%;

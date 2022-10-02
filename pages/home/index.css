@@ -1,1 +1,97 @@
-/* Desenvolva sua estilização aqui ... */
+body header.container {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 77px 0 62px 0; */
+    padding-top: 77px;
+    padding-bottom: 62px;
+
+    /* height: 50px; */
+}
+
+header button {
+    background: none;
+    /* height: */
+    border: none;
+}
+
+header button img {
+    background: none;
+    /* height:fit-content; */
+    /* border: 1px solid blue; */
+}
+
+main {
+    border: 1px solid green;
+}
+
+.music-type {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.button-list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-bottom: 60px;
+}
+
+.button-list button {
+    padding: 8px;
+    border-radius: var(--radius-1);
+}
+
+.max-price {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+}
+
+#range {
+    margin-bottom: 60px;
+    width: 100%;
+    /* border: 1px solid red; */
+
+}
+
+.album-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 38px;
+    margin: 60px 0 60px 0;
+}
+
+.album {
+    width: 308px;
+    border: 1px solid blue;
+}
+
+.album img {
+    width: 100%;
+    /* border: 1px solid blue; */
+}
+
+.album-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px;
+    border: 1px solid red;
+}
+
+.album-content div:first-child{
+    display: flex;
+    gap: 20px;
+}
+
+.album-content div:last-child{
+    display: flex;
+    justify-content: space-between;
+}
+
+.album-content div:last-child button{
+    display: flex;
+    justify-content: space-between;
+}
