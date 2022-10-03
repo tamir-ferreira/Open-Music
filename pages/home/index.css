@@ -8,20 +8,16 @@ body header.container {
     /* height: 50px; */
 }
 
-header button {
+/* header button {
     background: none;
-    /* height: */
-    border: none;
-}
 
-header button img {
-    background: none;
+    border: none;
+} */
+
+header img {
+    cursor: pointer;
     /* height:fit-content; */
     /* border: 1px solid blue; */
-}
-
-main {
-    border: 1px solid green;
 }
 
 .music-type {
@@ -30,17 +26,17 @@ main {
     gap: 24px;
 }
 
-.button-list {
+.buttons-list {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
     padding-bottom: 60px;
 }
 
-.button-list button {
+/* .button-list button {
     padding: 8px;
     border-radius: var(--radius-1);
-}
+} */
 
 .max-price {
     display: flex;
@@ -52,25 +48,56 @@ main {
     margin-bottom: 60px;
     width: 100%;
     /* border: 1px solid red; */
-
+    
 }
+
+/* #range::-webkit-slider-thumb {
+    appearance: none;
+} */
 
 .album-list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 38px;
+    gap: 20px;
     margin: 60px 0 60px 0;
 }
 
-.album {
+.album-item {
     width: 308px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+    /* border-radius: 8px; */
+    background-color: var(--color-grey-8) ;
+    /* z-index: 10; */
 }
 
-.album img {
+.album-item:hover{
+    background-color: var(--color-grey-7);
+}
+
+.album-item:hover img{
+    transform:scale(1.2);
+    cursor: pointer;
+    /* z-index: 1; */
+}
+
+
+
+.album-image{
+/* border: 1px solid green; */
+height: 113px;
+width: 100%;
+overflow: hidden;
+}
+
+.album-image img {
     width: 100%;
+    height: 100%;
+    border-radius: var(--radius-1) var(--radius-1) 0 0 ;
     /* border: 1px solid blue; */
+    /* height: 113px; */
+    /* object-fit:scale-down; */
+    transition: 0.3s ease-in-out;
 }
 
 .album-content{
@@ -78,7 +105,7 @@ main {
     flex-direction: column;
     gap: 20px;
     padding: 16px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .album-content div:first-child{
@@ -95,3 +122,35 @@ main {
     display: flex;
     justify-content: space-between;
 }
+
+
+
+body.dark-mode,
+body.dark-mode button{
+    background-color: var(--color-grey-0);
+    color: var(--color-grey-8);
+}
+
+body.dark-mode button{
+    background-color: var(--color-grey-2);
+    /* border: 1px solid var(--color-grey-2); */
+    /* color: var(--color-grey-8); */
+}
+
+body.dark-mode button:hover{
+    background-color: var(--color-grey-1);
+    /* background-color: var(--color-grey-2); */
+    /* border: 1px solid var(--color-grey-9); */
+
+}
+
+body.dark-mode .album-item {
+    background-color: var(--color-grey-1) ;
+}
+
+body.dark-mode .album-item:hover {
+    background-color: var(--color-grey-2) ;
+}
+/* button.dark-mode{
+    color: var(--color-grey-1);
+} */
