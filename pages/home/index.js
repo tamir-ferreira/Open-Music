@@ -61,8 +61,8 @@ function renderAlbums(array) {
             </div>
             <div class="album-content">
             <div>
-                <small>${element.band}</small>
-                <small>${element.year}</small>
+                <span class='small'>${element.band}</span>
+                <span class='small'>${element.year}</span>
             </div>
             <h3>${element.title}</h3>
             <div>

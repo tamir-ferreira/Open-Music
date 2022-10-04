@@ -48,7 +48,7 @@ h3{
   font-weight: 500;
 }
 
-span{
+span:not(.small){
   font-size: var(--font-3);
   font-weight: 500;
 }
@@ -71,7 +71,7 @@ button:hover{
   
 }
 
-small{
+.small{
   font-size: var(--font-4);
 }
 
