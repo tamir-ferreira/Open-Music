@@ -63,14 +63,20 @@ button {
   font-size: var(--font-3);
   border: none;
   font-weight: 500;
+  background-color: var(--color-grey-7);
 }
 
 button:hover, input:hover{
   cursor: pointer;
   background-color: var(--color-grey-8);
-  /* color: var(--color-grey-8); */
+  
 }
 
+.button-selected,
+.button-selected:hover{
+  color: var(--color-grey-8);
+  background-color: var(--color-grey-1);
+}
 
 .container {
   width: var(--container);
