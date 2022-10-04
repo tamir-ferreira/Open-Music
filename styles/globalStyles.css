@@ -58,7 +58,6 @@ button {
   align-items: center;
   padding: 6px 8px 6px 8px;
   border-radius: var(--radius-1);
-  /* height: 25px; */
   color: var(--color-grey-1);
   font-size: var(--font-3);
   border: none;
@@ -66,10 +65,14 @@ button {
   background-color: var(--color-grey-7);
 }
 
-button:hover, input:hover{
+button:hover{
   cursor: pointer;
   background-color: var(--color-grey-8);
   
+}
+
+small{
+  font-size: var(--font-4);
 }
 
 .button-selected,
@@ -83,8 +86,4 @@ button:hover, input:hover{
   max-width: 100%;
   padding: 0 1rem;
   margin: 0 auto;
-}
-
-small{
-  font-size: var(--font-4);
 }

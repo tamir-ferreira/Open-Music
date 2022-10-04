@@ -1,26 +1,14 @@
 body header.container {
     display: flex;
     justify-content: space-between;
-    /* padding: 77px 0 62px 0; */
     padding-top: 77px;
     padding-bottom: 62px;
-
-    /* height: 50px; */
 }
-
-/* header button {
-    background: none;
-
-    border: none;
-} */
 
 header button {
     width: 36px;
     height: 36px;
-    /* width:min-content; */
     cursor: pointer;
-    /* height:fit-content; */
-    /* border: 1px solid blue; */
     background-image: url('../../assets/img/darkmode-off.svg');
 }
 
@@ -37,27 +25,10 @@ header button {
     padding-bottom: 60px;
 }
 
-/* .button-list button {
-    padding: 8px;
-    border-radius: var(--radius-1);
-} */
-
 .max-price {
     display: flex;
     justify-content: space-between;
     padding-bottom: 24px;
-}
-
-#range-bar {
-    margin-bottom: 60px;
-    width: 100%;
-    /* border: 1px solid red; */
-    
-}
-
-
-#range::-webkit-slider-thumb {
-    appearance: none;
 }
 
 .album-list {
@@ -70,98 +41,49 @@ header button {
 
 .album-item {
     width: 308px;
-    /* border: 1px solid blue; */
-    /* border-radius: 8px; */
-    background-color: var(--color-grey-8) ;
-    /* z-index: 10; */
+    background-color: var(--color-grey-8);
 }
 
-.album-item:hover{
+.album-item:hover {
     background-color: var(--color-grey-7);
 }
 
-.album-item:hover img{
-    transform:scale(1.2);
+.album-item:hover img {
+    transform: scale(1.2);
     cursor: pointer;
-    /* z-index: 1; */
 }
 
-
-
-.album-image{
-/* border: 1px solid green; */
-height: 113px;
-width: 100%;
-overflow: hidden;
+.album-image {
+    height: 113px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .album-image img {
     width: 100%;
     height: 100%;
-    border-radius: var(--radius-1) var(--radius-1) 0 0 ;
-    /* border: 1px solid blue; */
-    /* height: 113px; */
-    /* object-fit:scale-down; */
+    border-radius: var(--radius-1) var(--radius-1) 0 0;
     transition: 0.3s ease-in-out;
 }
 
-.album-content{
+.album-content {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 16px;
-    /* border: 1px solid red; */
 }
 
-.album-content div:first-child{
+.album-content div:first-child {
     display: flex;
     gap: 20px;
 }
 
-.album-content div:last-child{
+.album-content div:last-child {
     display: flex;
     justify-content: space-between;
 }
 
-.album-content div:last-child button{
+.album-content div:last-child button {
     display: flex;
     justify-content: space-between;
 }
-
-
-
-body.dark-mode{
-    background-color: var(--color-grey-0);
-    color: var(--color-grey-8);
-}
-
-body.dark-mode button{
-    background-color: var(--color-grey-2);
-    color: var(--color-grey-8);
-    /* border: 1px solid var(--color-grey-2); */
-    /* color: var(--color-grey-8); */
-}
-body.dark-mode button.button-selected{
-    /* background-color: red; */
-    /* color: var(--color-grey-8); */
-    border: 1px solid var(--color-grey-9);
-    /* color: var(--color-grey-8); */
-}
-
-body.dark-mode button:hover{
-    background-color: var(--color-grey-1);
-    /* background-color: var(--color-grey-2); */
-    /* border: 1px solid var(--color-grey-9); */
-
-}
-
-body.dark-mode .album-item {
-    background-color: var(--color-grey-1) ;
-}
-
-body.dark-mode .album-item:hover {
-    background-color: var(--color-grey-2) ;
-}
-/* button.dark-mode{
-    color: var(--color-grey-1);
-} */

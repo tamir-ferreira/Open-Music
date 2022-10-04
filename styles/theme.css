@@ -1,0 +1,22 @@
+body.dark-mode {
+    background-color: var(--color-grey-0);
+    color: var(--color-grey-8);
+}
+
+body.dark-mode button {
+    background-color: var(--color-grey-2);
+    color: var(--color-grey-8);
+}
+
+body.dark-mode button.button-selected {
+    border: 1px solid var(--color-grey-9);
+}
+
+body.dark-mode button:hover,
+body.dark-mode .album-item {
+    background-color: var(--color-grey-1);
+}
+
+body.dark-mode .album-item:hover {
+    background-color: var(--color-grey-2);
+}

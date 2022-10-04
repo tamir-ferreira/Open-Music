@@ -26,4 +26,3 @@ btnDarkMode.onclick = () => {
     }
     body.classList.toggle("dark-mode")
 }
-
