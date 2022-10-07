@@ -25,7 +25,7 @@ function filterCategory(array, max) {
     const categoriesList = document.querySelectorAll('[data-category]');
     categoriesList[0].classList.add('button-selected')
 
-    rangeBar.onmousemove = () => {
+    rangeBar.oninput = () => {
         const maxPrice = document.querySelector('.max-price span')
         max = Number(rangeBar.value)
         maxPrice.innerText = `Até R$ ${max.toFixed(2).replace('.', ',')}`
