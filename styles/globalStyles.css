@@ -30,6 +30,8 @@
 
   --radius-1: 0.25rem;
   --container: 42rem;
+
+
 }
 
 body {
@@ -37,6 +39,7 @@ body {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   background-color: var(--color-grey-9);
+  transition: 0.5s ease-in-out;
 }
 
 ul{
