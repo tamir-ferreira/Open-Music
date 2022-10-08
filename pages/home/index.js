@@ -15,24 +15,27 @@ function renderCategories() {
         )
         count++
     })
-    filterCategory(products, Number(rangeBar.value));
+    filterCategory(products);
 }
 
 
 /* ------------ MAPEAR BOTÕES DO FILTRO ----------- */
-function filterCategory(array, max) {
+function filterCategory(array) {
     let category = 0;
     const categoriesList = document.querySelectorAll('[data-category]');
+    const maxPrice = document.querySelector('.max-price span')
     categoriesList[0].classList.add('button-selected')
 
-    rangeBar.oninput = () => {
-        const maxPrice = document.querySelector('.max-price span')
-        max = Number(rangeBar.value)
-        maxPrice.innerText = `Até R$ ${max.toFixed(2).replace('.', ',')}`
-        const filteredItems = array.filter(item => {
-            return (item.category == category || category == 0) && item.price <= max
-        })
-        renderAlbums(filteredItems)
+    rangeBar.oninput = (event) => {
+        let target = event.target
+        const min = target.min
+        const max = target.max
+        const value = Number(target.value)
+
+        target.style.backgroundSize = (value - min) * 100 / (max - min) + '% 100%'
+        maxPrice.innerText = `Até R$ ${value.toFixed(2).replace('.', ',')}`
+
+        filterItems(array,category)
     }
 
     categoriesList.forEach(element => {
@@ -40,21 +43,29 @@ function filterCategory(array, max) {
             categoriesList.forEach(element => element.classList.remove('button-selected'))
             category = element.getAttribute('data-category')
             element.classList.add('button-selected')
-            const filteredItems = array.filter(element => {
-                return (element.category == category || category == 0) && element.price <= max
-            })
-            renderAlbums(filteredItems);
+
+            filterItems(array,category)
         }
     })
 }
 
 
-/* RENDERIZAR OS DADOS RECEBIDOS */
+/* ------------- FILTRAR OS DADOS RECEBIDOS --------------*/
+function filterItems(array,category) {
+    const value = Number(rangeBar.value)
+    const filteredItems = array.filter(element => {
+        return (element.category == category || category == 0) && element.price <= value
+    })
+    renderAlbums(filteredItems);
+}
+
+
+/* -------------- RENDERIZAR OS DADOS RECEBIDOS --------------*/
 function renderAlbums(array) {
     const albumList = document.querySelector('.album-list');
     albumList.innerHTML = ''
     array.forEach(element => {
-        albumList.insertAdjacentHTML('beforeend',
+        albumList.insertAdjacentHTML('afterbegin',
             `<li class="album-item">
             <div class="album-image">
             <img src=${element.img} alt="album musical">
