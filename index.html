@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/globalStyles.css" />
+    <link rel="stylesheet" href="./styles/range.css" />
+    <link rel="stylesheet" href="./styles/theme.css" />
+    <link rel="stylesheet" href="./pages/home/index.css" />
+    <script defer src="./scripts/theme.js"></script>
+    <script defer src="./pages/home/productsData.js"></script>
+    <script defer type="module" src="./pages/home/index.js"></script>
+    <title>Open Music</title>
+  </head>
+
+  <body class="">
+    <header class="container">
+      <h1>open music</h1>
+      <button id="btn-dark-mode"></button>
+    </header>
+    <main class="container">
+      <section class="music-type">
+        <h3>Gênero Musical</h3>
+        <ul class="buttons-list">
+          <!-- RENDERIZADO PELO JS -->
+        </ul>
+      </section>
+      <section>
+        <div class="max-price">
+          <h3>Definir Preço</h3>
+          <span>Até R$ 90,00</span>
+        </div>
+        <input id="range-bar" type="range" min="0" max="90" value="90" />
+      </section>
+      <section class="show-search">
+        <h3>Álbuns Encontrados</h3>
+        <ul class="album-list">
+          <!-- RENDERIZADO PELO JS -->
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

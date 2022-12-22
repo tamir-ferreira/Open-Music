@@ -7,7 +7,7 @@
 }
 
 :root {
-  --color-brand-1:#9747ff;
+  --color-brand-1: #9747ff;
   --color-grey-0: #15171a;
   --color-grey-1: #212529;
   --color-grey-2: #2b2f33;
@@ -29,9 +29,7 @@
   --font-4: 0.75rem;
 
   --radius-1: 0.25rem;
-  --container: 42rem;
-
-
+  --container: 1000px;
 }
 
 body {
@@ -42,16 +40,16 @@ body {
   transition: 0.5s ease-in-out;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-h3{
+h3 {
   font-size: var(--font-2);
   font-weight: 500;
 }
 
-span:not(.small){
+span:not(.small) {
   font-size: var(--font-3);
   font-weight: 500;
 }
@@ -68,18 +66,17 @@ button {
   background-color: var(--color-grey-7);
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
   background-color: var(--color-grey-8);
-  
 }
 
-.small{
+.small {
   font-size: var(--font-4);
 }
 
 .button-selected,
-.button-selected:hover{
+.button-selected:hover {
   color: var(--color-grey-8);
   background-color: var(--color-grey-1);
 }
